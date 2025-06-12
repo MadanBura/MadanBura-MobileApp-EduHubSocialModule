@@ -1,106 +1,127 @@
-👨‍🏫 EduHubSocial - College Classroom Social App
-EduHubSocial is a full-stack mobile application designed to enhance communication and collaboration between students and teachers within a classroom or college environment. It mimics the features of a social platform like LinkedIn but focuses on educational use cases—allowing users to post, comment, like, share, and chat in real-time.
-This project is built using Android (Kotlin) for the frontend and Spring Boot for the backend. It features real-time messaging via WebSockets, secure authentication using JWT, Firebase Cloud Messaging (FCM) for push notifications, and follows a clean MVVM architecture on the Android side.
+# 👨‍🏫 **EduHubSocial - College Classroom Social App**
 
-🚀 Features
-📲 Mobile App (Frontend - Android)
-✅ User Authentication (Login/Signup) using JWT
-✅ View all posts in a feed (like LinkedIn)
-✅ Create, Like, Comment, and Share posts
-✅ Real-time chat using WebSockets
-✅ Push Notifications via Firebase Cloud Messaging (FCM)
-✅ Clean MVVM Architecture
-✅ State-safe Navigation using Navigation Graph
-✅ Dependency Injection using Hilt
-✅ Background operations with Kotlin Coroutines
-✅ Token storage using SharedPreferences
-✅ Responsive and intuitive UI
+**EduHubSocial** is a full-stack mobile application designed to enhance communication and collaboration between **students** and **teachers** within a classroom or college environment.  
+It mimics features of a social platform like **LinkedIn**, but focuses on **educational use cases** — allowing users to **post**, **comment**, **like**, **share**, and **chat in real-time**.
 
+This project is built using **Android (Kotlin)** for the frontend and **Spring Boot** for the backend.  
+It features **real-time messaging via WebSockets**, **secure JWT-based authentication**, **Firebase Cloud Messaging (FCM)** for push notifications, and follows a clean **MVVM architecture**.
 
+---
 
-🖥️ Backend (Spring Boot)
-✅ RESTful APIs built with Spring Boot
-✅ Secure authentication and authorization with Spring Security + JWT
-✅ MySQL database integration
-✅ WebSocket integration for real-time messaging
-✅ Firebase Admin SDK integration for push notifications
-✅ API documentation with Swagger
-✅ Role-based access control (User / Teacher)
+## 🚀 **Features**
 
+### 📲 **Mobile App (Frontend - Android)**
 
+- ✅ **User Authentication** (Login/Signup) using JWT  
+- ✅ **Feed view** with all posts (like LinkedIn)  
+- ✅ **Create, Like, Comment, and Share** posts  
+- ✅ **Real-time chat** using WebSockets  
+- ✅ **Push Notifications** via FCM  
+- ✅ **Clean MVVM Architecture**  
+- ✅ **State-safe Navigation** using Navigation Graph  
+- ✅ **Dependency Injection** using Hilt  
+- ✅ **Background operations** using Kotlin Coroutines  
+- ✅ **Token storage** with SharedPreferences  
+- ✅ **Responsive and intuitive UI**
 
-🔐 Authentication Flow
-User logs in or signs up.
-Credentials are authenticated, and a JWT Token is issued.
-Token is stored locally using SharedPreferences.
-All secure API requests include the token in the Authorization header.
-Backend validates and authorizes API access using Spring Security.
+---
 
+### 🖥️ **Backend (Spring Boot)**
 
+- ✅ **RESTful APIs** built using Spring Boot  
+- ✅ **JWT + Spring Security** for secure authentication  
+- ✅ **MySQL** for database storage  
+- ✅ **WebSocket integration** for real-time chat  
+- ✅ **Firebase Admin SDK** for push notifications  
+- ✅ **API Documentation** using Swagger  
+- ✅ **Role-based access control** (Student / Teacher)
 
-🧑‍🏫 User Roles & Functionalities
-👨‍🎓 Student
-Can view and interact with posts
-Can like, comment, and share study-related content
-Can send messages to teachers or classmates
-Can receive real-time chat and notification updates
+---
 
+## 🔐 **Authentication Flow**
 
+1. User logs in or signs up  
+2. Backend verifies credentials and issues a **JWT token**  
+3. Token is stored locally using **SharedPreferences**  
+4. All secure API requests include the token in the **Authorization** header  
+5. Backend verifies the token using **Spring Security**
 
-👩‍🏫 Teacher
-Can create academic posts (e.g., assignments, tips, study materials)
-Can interact with students via chat or posts
-Can moderate comments and interactions
+---
 
+## 🧑‍🏫 **User Roles & Functionalities**
 
+### 👨‍🎓 **Student**
 
-💬 Real-time Chat (WebSocket)
-WebSocket endpoints for chat
-One-on-one conversations between users
-Real-time message delivery and updates
-Optional features: typing indicators, read receipts
+- View and interact with posts  
+- Like, comment, and share study-related content  
+- Send messages to teachers or classmates  
+- Receive real-time chat and notification updates
 
-🔔 Notifications (FCM)
-Push notifications powered by Firebase Cloud Messaging (FCM)
-Users receive notifications on new messages or important posts
-Notifications sent via Firebase Admin SDK from the backend
+### 👩‍🏫 **Teacher**
 
+- Create academic posts (e.g., assignments, tips, materials)  
+- Interact with students via posts and chat  
+- Moderate comments and interactions
 
+---
 
-📚 Tech Stack
-Layer	Tech Stack
-Frontend	Android (Kotlin), MVVM, Hilt, Coroutines, Retrofit, Navigation Graph, WebSocket, FCM
-Backend	Spring Boot, Spring Security, JWT, WebSocket, MySQL, Swagger, Firebase Admin SDK
-Database	MySQL
-Auth	JWT (JSON Web Token)
-Realtime	WebSockets (SockJS + STOMP)
-Push	Firebase Cloud Messaging (FCM)
+## 💬 **Real-time Chat (WebSocket)**
 
+- WebSocket endpoints for chat  
+- One-on-one conversations  
+- Real-time message delivery  
+- *(Optional: Typing indicators, read receipts)*
 
+---
 
-🧭 App Flow
-User Registration/Login
-→ Token received and stored locally
-Main Feed Loaded
-→ Posts displayed in reverse chronological order
-Interaction
-→ Users can like, comment on, and share posts
-Post Creation
-→ Students and teachers can share academic updates
-Chat
-→ One-on-one real-time conversations using WebSocket
-Notifications
-→ Real-time push notifications for messages or mentions
+## 🔔 **Notifications (FCM)**
 
+- FCM integrated for push notifications  
+- Receive alerts on new messages or important posts  
+- Backend sends notifications via **Firebase Admin SDK**
 
-📦 Future Enhancements
+---
 
-🛠️ Admin Setup (Backend API Only)
-✅ Create and manage user roles
-✅ Monitor flagged posts (for moderation if required)
-✅ Track WebSocket message traffic and logs
-📁 File sharing in posts and chat
-🧑‍🎓 Classroom Groups / Subject-wise feeds
-🎓 Achievements & Badges system
-🔍 Search and Filter by tag or user
-📊 Analytics Dashboard for engagement metrics
+## 📚 **Tech Stack**
+
+| Layer       | Tech Stack                                                                 |
+|-------------|------------------------------------------------------------------------------|
+| **Frontend** | Android (Kotlin), MVVM, Hilt, Coroutines, Retrofit, Navigation Graph, WebSocket, FCM |
+| **Backend**  | Spring Boot, Spring Security, JWT, WebSocket, MySQL, Swagger, Firebase Admin SDK |
+| **Database** | MySQL                                                                       |
+| **Auth**     | JWT (JSON Web Token)                                                        |
+| **Realtime** | WebSockets (SockJS + STOMP)                                                 |
+| **Push**     | Firebase Cloud Messaging (FCM)                                              |
+
+---
+
+## 🧭 **App Flow**
+
+1. **User Registration/Login**  
+2. **Token received and stored locally**  
+3. **Posts feed displayed** sorted by newest first  
+4. **Users interact** (like/comment/share)  
+5. **Users post academic content**  
+6. **Real-time chat** between users  
+7. **Push notifications** for messages and mentions
+
+---
+
+## 🛠️ **Admin Setup (Backend API Only)**
+
+- ✅ Manage user roles  
+- ✅ Moderate flagged or inappropriate posts  
+- ✅ Monitor WebSocket connections and logs
+
+---
+
+## 📦 **Future Enhancements**
+
+- 📁 **File sharing** in posts and chat  
+- 🧑‍🏫 **Classroom groups** and subject-based feeds  
+- 🎓 **Achievement badges** for milestones  
+- 🔍 **Search and filtering** by tags or usernames  
+- 📊 **User engagement analytics**
+
+---
+
